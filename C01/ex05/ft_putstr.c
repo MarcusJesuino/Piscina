@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masantos <masantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 17:46:50 by masantos          #+#    #+#             */
-/*   Updated: 2025/04/23 13:27:58 by masantos         ###   ########.fr       */
+/*   Created: 2025/04/23 16:18:41 by masantos          #+#    #+#             */
+/*   Updated: 2025/04/23 17:13:51 by masantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <unistd.h>
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void ft_putstr(char *str)
 {
+	// int i;
 
-	*div = a / b;
-	*mod = a % b;
+	// i = 0;
+	while (str != '\0')
+	{
+		write (1, str, 1);
+		str++;
+	}
 }
 
-int main(void)
-{
-	int num1 = 13;
-	int num2 = 5;
-	int div;
-	int mod;
+// int main(void)
+// {
 
-
-	ft_div_mod(num1, num2, &div, &mod);
-	printf ("%d", div);
-	printf ("%d", mod);
-}
+// 	ft_putstr("peixe");
+// }

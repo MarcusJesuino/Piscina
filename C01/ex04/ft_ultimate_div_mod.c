@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: masantos <masantos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/22 17:46:50 by masantos          #+#    #+#             */
-/*   Updated: 2025/04/23 13:27:58 by masantos         ###   ########.fr       */
+/*   Created: 2025/04/23 13:32:52 by masantos          #+#    #+#             */
+/*   Updated: 2025/04/23 14:28:01 by masantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void ft_ultimate_div_mod(int *a, int *b)
 {
+	int savediv;
+	savediv = *a;
 
-	*div = a / b;
-	*mod = a % b;
+	*a = *a / *b;
+	*b = savediv % *b;
+
 }
 
 int main(void)
 {
-	int num1 = 13;
-	int num2 = 5;
-	int div;
-	int mod;
+	int a = 10;
+	int b = 3;
 
 
-	ft_div_mod(num1, num2, &div, &mod);
-	printf ("%d", div);
-	printf ("%d", mod);
+	ft_ultimate_div_mod(&a, &b);
+	printf("%d", a);
+	printf("%d", b);
 }
